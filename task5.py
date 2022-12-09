@@ -16,5 +16,8 @@ print(pol1)
 with open('file2.txt', 'r') as r2:
     pol2 = r2.readline()
 print(pol2)
-pol3 = sympy.simplify(pol1 + '+' + pol2)
+pol3 = str(sympy.simplify(pol1 + '+' + pol2))
 print(pol3)
+
+with open('file3.txt', 'w') as r3:
+    r3.write(pol3)
